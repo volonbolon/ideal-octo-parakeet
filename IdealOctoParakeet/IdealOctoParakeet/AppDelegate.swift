@@ -8,14 +8,61 @@
 
 import UIKit
 
+extension NSURLComponents {
+    func paramWithName(name:String)->String? {
+        if let queryItems = self.queryItems {
+            return queryItems.filter({$0.name == name}).first?.value
+        }
+        return nil
+    }
+}
+
+class LinkHandler {
+    // This is a oversimplification. In production code, we should introspect the controller
+    let rootViewController:UITabBarController
+    
+    init(rootViewController:UITabBarController) {
+        self.rootViewController = rootViewController
+    }
+}
+
+extension LinkHandler {
+    func handleBooks(url:NSURL) {
+        self.rootViewController.selectedIndex = 0
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nvc = self.rootViewController.viewControllers![0] as! UINavigationController
+        if let components = url.pathComponents {
+            if components.count > 2 {
+                let i = Int(components.last!)!
+                let btvc = nvc.viewControllers.first as! BooksTableViewController
+                btvc.viewDidLoad()
+                let books = btvc.books
+                if books.count > i {
+                    let book = books[i]
+                    let dvc = storyboard.instantiateViewControllerWithIdentifier(Constants.StoryboardIdentifier.BookInfoViewController) as! BookInfoViewController
+                    dvc.bookInfo = book
+                    nvc.pushViewController(dvc, animated: false)
+                }
+            }
+        }
+    }
+}
+
+enum TopDomains:String {
+    case Books = "books"
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var linkHandler:LinkHandler!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        self.linkHandler = LinkHandler(rootViewController: self.window!.rootViewController as! UITabBarController)
+        
+        let url = NSURL(string: "fwk://deepLinkedContent/books/1?showAuthor=true")
+        self.deepLink(url!)
         return true
     }
 
@@ -40,7 +87,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    func deepLink(url:NSURL) {
+        if let components = url.pathComponents {
+            
+            let td = TopDomains(rawValue: components[1])!
+            switch td {
+            case .Books:
+                self.linkHandler.handleBooks(url)
+            }
+        }
+        
+        
+//        print(components) // Optional(["/", "books", "1"])
+//        print(url.path) // Optional("/books/1")
+//        print(url.query) // Optional("showDetails=true")
+        
+    }
 
 }
 

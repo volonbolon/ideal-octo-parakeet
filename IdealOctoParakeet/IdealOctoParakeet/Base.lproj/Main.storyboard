@@ -59,7 +59,7 @@
         <!--Book Info View Controller-->
         <scene sceneID="cGI-Ly-gfP">
             <objects>
-                <viewController id="aXx-e5-3Ng" customClass="BookInfoViewController" customModule="IdealOctoParakeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aXx-e5-3Ng" customClass="BookInfoViewController" customModule="IdealOctoParakeet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="76j-Ti-Z9K"/>
                         <viewControllerLayoutGuide type="bottom" id="yIE-Lg-JMl"/>

@@ -9,27 +9,20 @@
 import UIKit
 
 class BooksTableViewController: UITableViewController {
-    var books:[[String:AnyObject]] = []
+    let books:[[String:AnyObject]]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    required init?(coder aDecoder: NSCoder) {
         let bundle = NSBundle.mainBundle()
         let contentURL = bundle.URLForResource("content", withExtension: "plist")
         
-        if let content = NSDictionary(contentsOfURL: contentURL!) {
-            self.books = content.objectForKey("books") as! [[String:AnyObject]]
-            print(self.books)
-        }
+        let content = NSDictionary(contentsOfURL: contentURL!)!
+        self.books = content.objectForKey("books") as! [[String:AnyObject]]
         
-        
-        
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        super.init(coder: aDecoder)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
@@ -111,5 +104,4 @@ class BooksTableViewController: UITableViewController {
             }
         }
     }
-
 }

@@ -14,4 +14,7 @@ struct Constants {
         static let ShowBookDetail = "ShowBookDetail"
         static let ShowAuthorDetail = "ShowAuthorDetail"
     }
+    struct StoryboardIdentifier {
+        static let BookInfoViewController = "BookInfoViewController"
+    }
 }
