@@ -18,6 +18,8 @@ class BookInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = bookInfo["title"] as? String
+        
         self.textView.text = self.bookInfo["summary"] as! String
         let author = self.bookInfo["author"] as! [String:AnyObject]
         
