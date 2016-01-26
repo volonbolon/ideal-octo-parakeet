@@ -115,10 +115,8 @@
 				B0027C8A1C579C7400F9CF22 /* Assets.xcassets */,
 				B0027C8C1C579C7400F9CF22 /* LaunchScreen.storyboard */,
 				B0027C8F1C579C7400F9CF22 /* Info.plist */,
-				B0027CB31C57A4D000F9CF22 /* BooksTableViewController.swift */,
+				B05DF9331C58135400933056 /* Books */,
 				B0027CB51C57B2EB00F9CF22 /* Constants.swift */,
-				B0027CB71C57B39C00F9CF22 /* BookInfoViewController.swift */,
-				B0027CB91C57BE9A00F9CF22 /* AuthorViewController.swift */,
 				B05DF92F1C58008B00933056 /* MoviesTableViewController.swift */,
 				B05DF9311C58040000933056 /* MovieInfoViewController.swift */,
 			);
@@ -141,6 +139,16 @@
 				B0027CA51C579C7400F9CF22 /* Info.plist */,
 			);
 			path = IdealOctoParakeetUITests;
+			sourceTree = "<group>";
+		};
+		B05DF9331C58135400933056 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				B0027CB31C57A4D000F9CF22 /* BooksTableViewController.swift */,
+				B0027CB71C57B39C00F9CF22 /* BookInfoViewController.swift */,
+				B0027CB91C57BE9A00F9CF22 /* AuthorViewController.swift */,
+			);
+			name = Books;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
