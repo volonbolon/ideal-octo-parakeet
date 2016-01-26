@@ -74,5 +74,45 @@ Ulysses is approximately 265,000 words in length, uses a lexicon of 30,030 words
 			<string>Ulysses</string>
 		</dict>
 	</array>
+	<key>movies</key>
+	<array>
+		<dict>
+			<key>cast</key>
+			<array>
+				<string>Joseph Cotten</string>
+				<string>Dorothy Comingore</string>
+				<string>Agnes Moorehead</string>
+				<string>Ruth Warrick</string>
+			</array>
+			<key>summary</key>
+			<string>Following the death of a publishing tycoon, news reporters scramble to discover the meaning of his final utterance.</string>
+			<key>title</key>
+			<string>Citizen Kane</string>
+		</dict>
+		<dict>
+			<key>cast</key>
+			<array>
+				<string>Humphrey Bogart</string>
+				<string>Ingrid Bergman</string>
+				<string>Paul Henreid</string>
+				<string>Claude Rains</string>
+			</array>
+			<key>summary</key>
+			<string>Set in Casablanca, Morocco during the early days of World War II: An American expatriate meets a former lover, with unforeseen complications.</string>
+			<key>title</key>
+			<string>Casablanca</string>
+		</dict>
+		<dict>
+			<key>cast</key>
+			<array>
+				<string>Gary Cooper</string>
+				<string>Ingrid Bergman</string>
+			</array>
+			<key>summary</key>
+			<string>During the Spanish Civil War, an American allied with the Republicans finds romance during a desperate mission to blow up a strategically important bridge.</string>
+			<key>title</key>
+			<string>For Whom the Bell Tolls</string>
+		</dict>
+	</array>
 </dict>
 </plist>
