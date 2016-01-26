@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>books</key>
+	<array>
+		<dict>
+			<key>author</key>
+			<dict>
+				<key>bio</key>
+				<string>Miguel de Cervantes Saavedra[b] (/sərˈvɒnteɪz/ or /sərˈvæntiːz/;[2] Spanish: [miˈɣel de θerˈbantes saˈβeðɾa]; 29 September 1547 (assumed) – 22 April 1616),[3] often simply called Cervantes, was a Spanish novelist, poet, and playwright.
+
+His major work, Don Quixote, considered to be the first modern European novel,[4] is a classic of Western literature, and is regarded amongst the best works of fiction ever written.[5] His influence on the Spanish language has been so great that the language is often called la lengua de Cervantes ("the language of Cervantes").[6] He was dubbed El Príncipe de los Ingenios ("The Prince of Wits").[7]
+
+In 1569, Cervantes moved to Rome, where he worked as chamber assistant of a cardinal. He then enlisted as a soldier in a Spanish Navy infantry regiment and continued his military life until 1575, when he was captured by Barbary pirates. After five years of captivity, he was released by his captors on payment of a ransom by his parents and the Trinitarians, a Catholic religious order, and he subsequently returned to his family in Madrid.
+
+In 1585, Cervantes published a pastoral novel named La Galatea. He worked as a purchasing agent for the Spanish Armada, and later as a tax collector.
+
+In 1597, discrepancies in his accounts for three years previous landed him in the Crown Jail of Seville.
+
+In 1605, he was in Valladolid when the immediate success of the first part of his Don Quixote, published in Madrid, signalled his return to the literary world.
+
+In 1607, he settled in Madrid, where he lived and worked until his death. During the last nine years of his life, Cervantes solidified his reputation as a writer; he published the Novelas ejemplares (Exemplary Novels) in 1613, the Journey to Parnassus (Viaje al Parnaso) in 1614, and the Ocho comedias y ocho entremeses and the second part of Don Quixote in 1615. His last work The Trials of Persiles y Sigismunda (Los Trabajos de Persiles y Sigismunda) was published posthumously, in 1617.</string>
+				<key>name</key>
+				<string>Miguel de Cervantes Saavedra</string>
+			</dict>
+			<key>summary</key>
+			<string>Cervantes said the first chapters were taken from "The Archive of La Mancha", and the rest were translated from Arabic by the Moorish author Cide Hamete Benengeli. This metafictional trick appears to be designed to give a greater credibility to the text, by implying that Don Quixote is a real character and that the story truly occurred several decades back</string>
+			<key>title</key>
+			<string>Don Quixote</string>
+		</dict>
+		<dict>
+			<key>author</key>
+			<dict>
+				<key>bio</key>
+				<string>Fyodor Mikhailovich Dostoyevsky[a] (/ˌdɒstəˈjɛfski, ˌdʌs-/;[1] Russian: Фёдор Миха́йлович Достое́вский; IPA: [ˈfʲɵdər mʲɪˈxajləvʲɪtɕ dəstɐˈjɛfskʲɪj] ( listen); 11 November 1821 – 9 February 1881),[b] sometimes transliterated Dostoevsky, was a Russian novelist, short story writer, essayist, journalist and philosopher. Dostoyevsky's literary works explore human psychology in the troubled political, social, and spiritual atmosphere of 19th-century Russia. Many of his works are marked by a preoccupation with Christianity, explored through the prism of the individual confronted with life's hardships and beauty.
+
+He began writing in his 20s, and his first novel, Poor Folk, was published in 1846 when he was 25. His major works include Crime and Punishment (1866), The Idiot (1869), Demons (1872) and The Brothers Karamazov (1880). His output consists of 11 novels, three novellas, 17 short novels and numerous other works. Many literary critics rate him as one of the greatest psychologists in world literature.[2] His 1864 novella Notes from Underground is considered to be one of the first works of existentialist literature.
+
+Born in Moscow in 1821, Dostoyevsky was introduced to literature at an early age through fairy tales and legends, and through books by Russian and foreign authors. His mother died in 1837, when he was 15, and around the same time he left school to enter the Nikolayev Military Engineering Institute. After graduating, he worked as an engineer and briefly enjoyed a lavish lifestyle, translating books to earn extra money. In the mid-1840s he wrote his first novel, Poor Folk, which gained him entry into St. Petersburg's literary circles.
+
+In the following years, Dostoyevsky worked as a journalist, publishing and editing several magazines of his own and later A Writer's Diary, a collection of his writings. He began to travel around western Europe and developed a gambling addiction, which led to financial hardship. For a time, he had to beg for money, but he eventually became one of the most widely read and highly regarded Russian writers. His books have been translated into more than 170 languages. Dostoyevsky influenced a multitude of writers and philosophers, from Anton Chekhov and Ernest Hemingway to Friedrich Nietzsche and Jean-Paul Sartre.</string>
+				<key>name</key>
+				<string>Fyodor Dostoyevsky</string>
+			</dict>
+			<key>summary</key>
+			<string>Crime and Punishment (Russian: Преступлéние и наказáние, tr. Prestupleniye i nakazaniye; IPA: [prʲɪstʊˈplʲenʲɪɪ ɪ nəkɐˈzanʲɪɪ]) is a novel by the Russian author Fyodor Dostoyevsky. It was first published in the literary journal The Russian Messenger in twelve monthly installments during 1866.[1] It was later published in a single volume. It is the second of Dostoyevsky's full-length novels following his return from 10 years of exile in Siberia. Crime and Punishment is considered the first great novel of his "mature" period of writing.[2]
+
+Crime and Punishment focuses on the mental anguish and moral dilemmas of Rodion Raskolnikov, an impoverished ex-student in St. Petersburg who formulates and executes a plan to kill an unscrupulous pawnbroker for her cash. Raskolnikov, in attempts to defend his actions, argues that with the pawnbroker's money he can perform good deeds to counterbalance the crime, while ridding the world of a vermin. He also commits the murder to test a theory of his that dictates some people are naturally capable of such actions, and even have the right to perform them. Several times throughout the novel, Raskolnikov compares himself with Napoleon Bonaparte and shares his belief that murder is permissible in pursuit of a higher purpose.</string>
+			<key>title</key>
+			<string>Crime and Punishment</string>
+		</dict>
+		<dict>
+			<key>author</key>
+			<dict>
+				<key>bio</key>
+				<string>James Augustine[1] Aloysius Joyce (2 February 1882 – 13 January 1941) was an Irish novelist and poet. He contributed to the modernist avant-garde, and is regarded as one of the most influential and important authors of the twentieth century.
+
+Joyce is best known for Ulysses (1922), a landmark work in which the episodes of Homer's Odyssey are paralleled in an array of contrasting literary styles, perhaps most prominent among these the stream of consciousness technique he utilized. Other well-known works are the short-story collection Dubliners (1914), and the novels A Portrait of the Artist as a Young Man (1916) and Finnegans Wake (1939). His other writings include three books of poetry, a play, occasional journalism, and his published letters.
+
+Joyce was born in 41 Brighton Square, Rathgar, Dublin—about half a mile from his mother's birthplace in Terenure—into a middle-class family on the way down. A brilliant student, he excelled at the Jesuit schools Clongowes and Belvedere, despite the chaotic family life imposed by his father's alcoholism and unpredictable finances. He went on to attend University College Dublin.
+
+In 1904, in his early twenties, Joyce emigrated permanently to continental Europe with his partner Nora Barnacle. They lived in Trieste, Paris, and Zurich. Though most of his adult life was spent abroad, Joyce's fictional universe centres on Dublin, and is populated largely by characters who closely resemble family members, enemies and friends from his time there. Ulysses in particular is set with precision in the streets and alleyways of the city. Shortly after the publication of Ulysses, he elucidated this preoccupation somewhat, saying, "For myself, I always write about Dublin, because if I can get to the heart of Dublin I can get to the heart of all the cities of the world. In the particular is contained the universal."[2]</string>
+				<key>name</key>
+				<string>James Joyce</string>
+			</dict>
+			<key>summary</key>
+			<string>Ulysses is a modernist novel by Irish writer James Joyce. It was first serialised in parts in the American journal The Little Review from March 1918 to December 1920, and then published in its entirety by Sylvia Beach in February 1922, in Paris. It is considered to be one of the most important works of modernist literature,[1] and has been called "a demonstration and summation of the entire movement".[2] According to Declan Kiberd, "Before Joyce, no writer of fiction had so foregrounded the process of thinking."[3]
+
+Ulysses chronicles the peripatetic appointments and encounters of Leopold Bloom in Dublin in the course of an ordinary day, 16 June 1904.[4] Ulysses is the Latinised name of Odysseus, the hero of Homer's epic poem Odyssey, and the novel establishes a series of parallels between the poem and the novel, with structural correspondences between the characters and experiences of Leopold Bloom and Odysseus, Molly Bloom and Penelope, and Stephen Dedalus and Telemachus, in addition to events and themes of the early twentieth century context of modernism, Dublin, and Ireland's relationship to Britain. The novel imitates registers of centuries of English literature and is highly allusive.
+
+Ulysses is approximately 265,000 words in length, uses a lexicon of 30,030 words (including proper names, plurals and various verb tenses),[5] and is divided into eighteen episodes. Since publication, the book has attracted controversy and scrutiny, ranging from early obscenity trials to protracted textual "Joyce Wars". Ulysses' stream-of-consciousness technique, careful structuring, and experimental prose — full of puns, parodies, and allusions — as well as its rich characterisation and broad humour, made the book a highly regarded novel in the modernist pantheon. Joyce fans worldwide now celebrate 16 June as Bloomsday. In 1998, the American publishing firm Modern Library ranked Ulysses first on its list of the 100 best English-language novels of the 20th century.[6]</string>
+			<key>title</key>
+			<string>Ulysses</string>
+		</dict>
+	</array>
+</dict>
+</plist>
