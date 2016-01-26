@@ -1,3 +1,3 @@
 # ideal-octo-parakeet
 
-(Books)[parakeet://deepLinkedContent/books]
+[Books](parakeet://deepLinkedContent/books)
