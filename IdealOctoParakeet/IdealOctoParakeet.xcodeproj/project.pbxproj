@@ -20,6 +20,7 @@
 		B0027CBA1C57BE9A00F9CF22 /* AuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0027CB91C57BE9A00F9CF22 /* AuthorViewController.swift */; };
 		B05DF9301C58008B00933056 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DF92F1C58008B00933056 /* MoviesTableViewController.swift */; };
 		B05DF9321C58040000933056 /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DF9311C58040000933056 /* MovieInfoViewController.swift */; };
+		B05DF9351C58137F00933056 /* CastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DF9341C58137F00933056 /* CastTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		B0027CB91C57BE9A00F9CF22 /* AuthorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorViewController.swift; sourceTree = "<group>"; };
 		B05DF92F1C58008B00933056 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		B05DF9311C58040000933056 /* MovieInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInfoViewController.swift; sourceTree = "<group>"; };
+		B05DF9341C58137F00933056 /* CastTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				B0027CB51C57B2EB00F9CF22 /* Constants.swift */,
 				B05DF92F1C58008B00933056 /* MoviesTableViewController.swift */,
 				B05DF9311C58040000933056 /* MovieInfoViewController.swift */,
+				B05DF9341C58137F00933056 /* CastTableViewController.swift */,
 			);
 			path = IdealOctoParakeet;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			files = (
 				B05DF9321C58040000933056 /* MovieInfoViewController.swift in Sources */,
 				B05DF9301C58008B00933056 /* MoviesTableViewController.swift in Sources */,
+				B05DF9351C58137F00933056 /* CastTableViewController.swift in Sources */,
 				B0027CB41C57A4D000F9CF22 /* BooksTableViewController.swift in Sources */,
 				B0027CBA1C57BE9A00F9CF22 /* AuthorViewController.swift in Sources */,
 				B0027CB81C57B39C00F9CF22 /* BookInfoViewController.swift in Sources */,

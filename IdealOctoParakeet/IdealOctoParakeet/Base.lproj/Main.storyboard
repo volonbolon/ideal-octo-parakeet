@@ -34,11 +34,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="OV3-kv-k0a">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="OV3-kv-k0a">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OV3-kv-k0a" id="44T-Gy-OSV">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -101,7 +101,80 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sZ-DO-6dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2204" y="-171"/>
+            <point key="canvasLocation" x="2224" y="-171"/>
+        </scene>
+        <!--Movie Info View Controller-->
+        <scene sceneID="Ims-28-zKJ">
+            <objects>
+                <viewController id="cwY-Qd-gJ5" customClass="MovieInfoViewController" customModule="IdealOctoParakeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="adB-ll-bcP"/>
+                        <viewControllerLayoutGuide type="bottom" id="QHC-R3-2s5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VAp-FQ-SAj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sl9-r5-1qY">
+                                <rect key="frame" x="284" y="513" width="32" height="30"/>
+                                <state key="normal" title="Cast"/>
+                                <connections>
+                                    <segue destination="4Sj-n2-Efn" kind="show" identifier="ShowCast" id="CI3-4x-Xs1"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="khh-5j-c9S">
+                                <rect key="frame" x="20" y="72" width="560" height="433"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QHC-R3-2s5" firstAttribute="top" secondItem="sl9-r5-1qY" secondAttribute="bottom" constant="8" id="3Md-W1-i4X"/>
+                            <constraint firstItem="sl9-r5-1qY" firstAttribute="centerX" secondItem="VAp-FQ-SAj" secondAttribute="centerX" id="Aod-tK-wwI"/>
+                            <constraint firstItem="khh-5j-c9S" firstAttribute="top" secondItem="adB-ll-bcP" secondAttribute="bottom" constant="8" id="Cab-US-6KK"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="khh-5j-c9S" secondAttribute="leading" id="Hcb-Ah-vPI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="khh-5j-c9S" secondAttribute="trailing" id="TPt-O1-3yc"/>
+                            <constraint firstItem="sl9-r5-1qY" firstAttribute="top" secondItem="khh-5j-c9S" secondAttribute="bottom" constant="8" id="b57-1x-8qR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="summaryTextView" destination="khh-5j-c9S" id="55B-Vr-e2G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fbk-iW-A8J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2224" y="548"/>
+        </scene>
+        <!--Cast-->
+        <scene sceneID="9dK-xZ-kKI">
+            <objects>
+                <tableViewController title="Cast" id="4Sj-n2-Efn" customClass="CastTableViewController" customModule="IdealOctoParakeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sZN-He-Lpw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="starCell" id="YyK-cI-LoO">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YyK-cI-LoO" id="x3c-NF-pJS">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Sj-n2-Efn" id="5fj-Tz-OUd"/>
+                            <outlet property="delegate" destination="4Sj-n2-Efn" id="PIs-d1-n7C"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHb-Vh-eya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2895" y="548"/>
         </scene>
         <!--Author View Controller-->
         <scene sceneID="hdL-FR-VMe">
@@ -158,22 +231,25 @@
             </objects>
             <point key="canvasLocation" x="692" y="-171"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Movies Table View Controller-->
         <scene sceneID="Yqf-NC-6aT">
             <objects>
-                <tableViewController id="XJo-yt-eP0" sceneMemberID="viewController">
+                <tableViewController id="XJo-yt-eP0" customClass="MoviesTableViewController" customModule="IdealOctoParakeet" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="j2z-l2-CKg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Z1Q-xN-ncQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="moviesCell" id="Z1Q-xN-ncQ">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z1Q-xN-ncQ" id="fau-6D-Mgl">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="cwY-Qd-gJ5" kind="show" identifier="ShowMovieDetail" id="8sR-rA-zwm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
