@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="1504" y="-171"/>
         </scene>
-        <!--View Controller-->
+        <!--Book Info View Controller-->
         <scene sceneID="cGI-Ly-gfP">
             <objects>
-                <viewController id="aXx-e5-3Ng" sceneMemberID="viewController">
+                <viewController id="aXx-e5-3Ng" customClass="BookInfoViewController" customModule="IdealOctoParakeet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="76j-Ti-Z9K"/>
                         <viewControllerLayoutGuide type="bottom" id="yIE-Lg-JMl"/>
@@ -78,6 +78,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcY-3p-MSf">
                                 <rect key="frame" x="277" y="513" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="mhF-mO-2k6" kind="show" identifier="ShowAuthorDetail" id="BOf-qy-mRd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -90,10 +93,50 @@
                             <constraint firstItem="WcY-3p-MSf" firstAttribute="centerX" secondItem="qch-6G-zt5" secondAttribute="centerX" id="sSp-Y1-75m"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authorButton" destination="WcY-3p-MSf" id="5wJ-Ht-NG9"/>
+                        <outlet property="textView" destination="98t-a2-sDA" id="0jp-YA-51Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sZ-DO-6dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2204" y="-171"/>
+        </scene>
+        <!--Author View Controller-->
+        <scene sceneID="hdL-FR-VMe">
+            <objects>
+                <viewController id="mhF-mO-2k6" customClass="AuthorViewController" customModule="IdealOctoParakeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ir3-LN-9IN"/>
+                        <viewControllerLayoutGuide type="bottom" id="stO-7S-7Jo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nce-It-FOD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R7S-tw-kxg">
+                                <rect key="frame" x="21" y="72" width="559" height="471"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="R7S-tw-kxg" secondAttribute="trailing" id="7qV-v8-PyS"/>
+                            <constraint firstItem="stO-7S-7Jo" firstAttribute="top" secondItem="R7S-tw-kxg" secondAttribute="bottom" constant="8" id="Mg2-ss-AFq"/>
+                            <constraint firstItem="R7S-tw-kxg" firstAttribute="leading" secondItem="nce-It-FOD" secondAttribute="leadingMargin" constant="1" id="hQI-Kt-hNh"/>
+                            <constraint firstItem="R7S-tw-kxg" firstAttribute="top" secondItem="ir3-LN-9IN" secondAttribute="bottom" constant="8" id="qLJ-Qg-EPc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bioTextView" destination="R7S-tw-kxg" id="sG4-nw-1Zq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GWs-vQ-75Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2895" y="-171"/>
         </scene>
         <!--Item-->
         <scene sceneID="DGD-lO-WCi">

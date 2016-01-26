@@ -100,5 +100,16 @@ class BooksTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let identifier = segue.identifier
+        if identifier == Constants.SegueIdentifier.ShowBookDetail {
+            if let selectedIndexPath = self.tableView.indexPathForSelectedRow {
+                let book = self.books[selectedIndexPath.row]
+                let destinationViewController = segue.destinationViewController as! BookInfoViewController
+                destinationViewController.bookInfo = book
+            }
+        }
+    }
 
 }
