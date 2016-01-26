@@ -12,5 +12,6 @@ import Foundation
 struct Constants {
     struct SegueIdentifier {
         static let ShowBookDetail = "ShowBookDetail"
+        static let ShowAuthorDetail = "ShowAuthorDetail"
     }
 }
