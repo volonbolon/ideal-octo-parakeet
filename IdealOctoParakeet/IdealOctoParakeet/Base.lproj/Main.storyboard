@@ -18,11 +18,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="Drf-PB-xFV" kind="relationship" relationship="viewControllers" id="T1a-0z-XC1"/>
+                        <segue destination="XJo-yt-eP0" kind="relationship" relationship="viewControllers" id="LVT-en-Jcv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-30" y="-18"/>
+            <point key="canvasLocation" x="-14" y="-8"/>
         </scene>
         <!--Books Table View Controller-->
         <scene sceneID="ZRs-qR-N0Y">
@@ -138,11 +139,11 @@
             </objects>
             <point key="canvasLocation" x="2895" y="-171"/>
         </scene>
-        <!--Item-->
+        <!--Books-->
         <scene sceneID="DGD-lO-WCi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Drf-PB-xFV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5Nb-iY-Y2K"/>
+                    <tabBarItem key="tabBarItem" title="Books" id="5Nb-iY-Y2K"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="T08-DH-Cf0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -156,6 +157,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dX4-sv-3MO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="692" y="-171"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="Yqf-NC-6aT">
+            <objects>
+                <tableViewController id="XJo-yt-eP0" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="j2z-l2-CKg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Z1Q-xN-ncQ">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z1Q-xN-ncQ" id="fau-6D-Mgl">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XJo-yt-eP0" id="QLZ-iK-Z3g"/>
+                            <outlet property="delegate" destination="XJo-yt-eP0" id="Mxb-np-k8W"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Movies" id="DLf-gy-OJ4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hq9-Bc-Kbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="548"/>
         </scene>
     </scenes>
 </document>

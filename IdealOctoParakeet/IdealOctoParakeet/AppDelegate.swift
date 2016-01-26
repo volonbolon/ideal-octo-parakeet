@@ -57,8 +57,40 @@ extension LinkHandler {
     }
 }
 
+extension LinkHandler {
+    func handleMovies(url:NSURL) {
+        self.rootViewController.selectedIndex = 1
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let nvc = self.rootViewController.viewControllers![0] as! UINavigationController
+//        if let components = url.pathComponents {
+//            if components.count > 2 {
+//                let i = Int(components.last!)!
+//                let btvc = nvc.viewControllers.first as! BooksTableViewController
+//                btvc.viewDidLoad()
+//                let books = btvc.books
+//                if books.count > i {
+//                    let book = books[i]
+//                    let dvc = storyboard.instantiateViewControllerWithIdentifier(Constants.StoryboardIdentifier.BookInfoViewController) as! BookInfoViewController
+//                    dvc.bookInfo = book
+//                    nvc.pushViewController(dvc, animated: false)
+//                    
+//                    let urlComponents = NSURLComponents(URL: url, resolvingAgainstBaseURL: false)
+//                    if let showAuthor = urlComponents!.paramWithName("showAuthor") {1
+//                        if showAuthor == "true" {
+//                            let avc = storyboard.instantiateViewControllerWithIdentifier(Constants.StoryboardIdentifier.AuthorViewController) as! AuthorViewController
+//                            avc.authorInfo = book["author"] as! [String:AnyObject]
+//                            nvc.pushViewController(avc, animated: false)
+//                        }
+//                    }
+//                }
+//            }
+//        }
+    }
+}
+
 enum TopDomains:String {
     case Books = "books"
+    case Movies = "movies"
 }
 
 @UIApplicationMain
@@ -70,7 +102,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.linkHandler = LinkHandler(rootViewController: self.window!.rootViewController as! UITabBarController)
         
-        let url = NSURL(string: "fwk://deepLinkedContent/books/1?showAuthor=true")
+        let url = NSURL(string: "fwk://deepLinkedContent/movies/1?showAuthor=true")
         self.deepLink(url!)
         return true
     }
@@ -104,6 +136,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch td {
             case .Books:
                 self.linkHandler.handleBooks(url)
+            case .Movies:
+                self.linkHandler.handleMovies(url)
             }
         }
         
