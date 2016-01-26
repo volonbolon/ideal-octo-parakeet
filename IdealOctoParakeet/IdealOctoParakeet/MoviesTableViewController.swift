@@ -9,7 +9,18 @@
 import UIKit
 
 class MoviesTableViewController: UITableViewController {
-
+    let movies:[[String:AnyObject]]
+    
+    required init?(coder aDecoder: NSCoder) {
+        let bundle = NSBundle.mainBundle()
+        let contentURL = bundle.URLForResource("content", withExtension: "plist")
+        
+        let content = NSDictionary(contentsOfURL: contentURL!)!
+        self.movies = content.objectForKey("movies") as! [[String:AnyObject]]
+        
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,69 +38,28 @@ class MoviesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.movies.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("moviesCell", forIndexPath: indexPath)
 
-        // Configure the cell...
+        let movie = self.movies[indexPath.row]
+        
+        cell.textLabel?.text = movie["title"] as? String
 
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let identifier = segue.identifier
+        if identifier == Constants.SegueIdentifier.ShowMovieDetail {
+            let selectedIndexPath = self.tableView.indexPathForSelectedRow
+            let movie = self.movies[selectedIndexPath!.row]
+            let dvc = segue.destinationViewController as! MovieInfoViewController
+            dvc.movie = movie
+        }
     }
-    */
 
 }
