@@ -42,6 +42,15 @@ extension LinkHandler {
                     let dvc = storyboard.instantiateViewControllerWithIdentifier(Constants.StoryboardIdentifier.BookInfoViewController) as! BookInfoViewController
                     dvc.bookInfo = book
                     nvc.pushViewController(dvc, animated: false)
+                    
+                    let urlComponents = NSURLComponents(URL: url, resolvingAgainstBaseURL: false)
+                    if let showAuthor = urlComponents!.paramWithName("showAuthor") {1
+                        if showAuthor == "true" {
+                            let avc = storyboard.instantiateViewControllerWithIdentifier(Constants.StoryboardIdentifier.AuthorViewController) as! AuthorViewController
+                            avc.authorInfo = book["author"] as! [String:AnyObject]
+                            nvc.pushViewController(avc, animated: false)
+                        }
+                    }
                 }
             }
         }

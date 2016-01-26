@@ -105,7 +105,7 @@
         <!--Author View Controller-->
         <scene sceneID="hdL-FR-VMe">
             <objects>
-                <viewController id="mhF-mO-2k6" customClass="AuthorViewController" customModule="IdealOctoParakeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mhF-mO-2k6" customClass="AuthorViewController" customModule="IdealOctoParakeet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ir3-LN-9IN"/>
                         <viewControllerLayoutGuide type="bottom" id="stO-7S-7Jo"/>

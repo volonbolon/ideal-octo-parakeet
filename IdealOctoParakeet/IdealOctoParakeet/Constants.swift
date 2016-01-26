@@ -16,5 +16,6 @@ struct Constants {
     }
     struct StoryboardIdentifier {
         static let BookInfoViewController = "BookInfoViewController"
+        static let AuthorViewController = "AuthorViewController"
     }
 }
