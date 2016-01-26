@@ -13,6 +13,7 @@ struct Constants {
     struct SegueIdentifier {
         static let ShowBookDetail = "ShowBookDetail"
         static let ShowAuthorDetail = "ShowAuthorDetail"
+        static let ShowMovieDetail = "ShowMovieDetail"
     }
     struct StoryboardIdentifier {
         static let BookInfoViewController = "BookInfoViewController"
