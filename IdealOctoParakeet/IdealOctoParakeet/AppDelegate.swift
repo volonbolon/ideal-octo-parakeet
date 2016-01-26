@@ -35,7 +35,6 @@ extension LinkHandler {
             if components.count > 2 {
                 let i = Int(components.last!)!
                 let btvc = nvc.viewControllers.first as! BooksTableViewController
-                btvc.viewDidLoad()
                 let books = btvc.books
                 if books.count > i {
                     let book = books[i]
@@ -59,32 +58,32 @@ extension LinkHandler {
 
 extension LinkHandler {
     func handleMovies(url:NSURL) {
-        self.rootViewController.selectedIndex = 1
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let nvc = self.rootViewController.viewControllers![0] as! UINavigationController
-//        if let components = url.pathComponents {
-//            if components.count > 2 {
-//                let i = Int(components.last!)!
-//                let btvc = nvc.viewControllers.first as! BooksTableViewController
-//                btvc.viewDidLoad()
-//                let books = btvc.books
-//                if books.count > i {
-//                    let book = books[i]
-//                    let dvc = storyboard.instantiateViewControllerWithIdentifier(Constants.StoryboardIdentifier.BookInfoViewController) as! BookInfoViewController
-//                    dvc.bookInfo = book
-//                    nvc.pushViewController(dvc, animated: false)
-//                    
-//                    let urlComponents = NSURLComponents(URL: url, resolvingAgainstBaseURL: false)
-//                    if let showAuthor = urlComponents!.paramWithName("showAuthor") {1
-//                        if showAuthor == "true" {
-//                            let avc = storyboard.instantiateViewControllerWithIdentifier(Constants.StoryboardIdentifier.AuthorViewController) as! AuthorViewController
-//                            avc.authorInfo = book["author"] as! [String:AnyObject]
-//                            nvc.pushViewController(avc, animated: false)
-//                        }
-//                    }
-//                }
-//            }
-//        }
+        let selectedIndex = 1
+        self.rootViewController.selectedIndex = selectedIndex
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nvc = self.rootViewController.viewControllers![selectedIndex] as! UINavigationController
+        if let components = url.pathComponents {
+            if components.count > 2 {
+                let i = Int(components.last!)!
+                let mtvc = nvc.viewControllers.first as! MoviesTableViewController
+                let movies = mtvc.movies
+                if movies.count > i {
+                    let movie = movies[i]
+                    let dvc = storyboard.instantiateViewControllerWithIdentifier(Constants.StoryboardIdentifier.MovieInfoViewController) as! MovieInfoViewController
+                    dvc.movie = movie
+                    nvc.pushViewController(dvc, animated: false)
+                    
+                    let urlComponents = NSURLComponents(URL: url, resolvingAgainstBaseURL: false)
+                    if let showCast = urlComponents!.paramWithName("showCast") {1
+                        if showCast == "true" {
+                            let cvc = storyboard.instantiateViewControllerWithIdentifier(Constants.StoryboardIdentifier.CastTableViewController) as! CastTableViewController
+                            cvc.cast = movie["cast"] as! [String]
+                            nvc.pushViewController(cvc, animated: false)
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -102,7 +101,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.linkHandler = LinkHandler(rootViewController: self.window!.rootViewController as! UITabBarController)
         
-        let url = NSURL(string: "fwk://deepLinkedContent/movies/1?showAuthor=true")
+        let url = NSURL(string: "fwk://deepLinkedContent/movies/1?showCast=true")
         self.deepLink(url!)
         return true
     }

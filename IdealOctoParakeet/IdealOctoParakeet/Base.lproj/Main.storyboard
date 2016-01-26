@@ -106,7 +106,7 @@
         <!--Movie Info View Controller-->
         <scene sceneID="Ims-28-zKJ">
             <objects>
-                <viewController id="cwY-Qd-gJ5" customClass="MovieInfoViewController" customModule="IdealOctoParakeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cwY-Qd-gJ5" customClass="MovieInfoViewController" customModule="IdealOctoParakeet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="adB-ll-bcP"/>
                         <viewControllerLayoutGuide type="bottom" id="QHC-R3-2s5"/>
@@ -151,7 +151,7 @@
         <!--Cast-->
         <scene sceneID="9dK-xZ-kKI">
             <objects>
-                <tableViewController title="Cast" id="4Sj-n2-Efn" customClass="CastTableViewController" customModule="IdealOctoParakeet" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CastTableViewController" title="Cast" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4Sj-n2-Efn" customClass="CastTableViewController" customModule="IdealOctoParakeet" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sZN-He-Lpw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
