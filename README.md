@@ -1,3 +1,3 @@
 # ideal-octo-parakeet
 
-[Books](parakeet://deepLinkedContent/books)
+[Books](http://htmlpreview.github.io/?https://github.com/volonbolon/ideal-octo-parakeet/blob/master/links.html)
